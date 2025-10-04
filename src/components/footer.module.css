@@ -1,0 +1,29 @@
+.footer_section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    height: auto;
+    width: 100%;
+    place-items: center;
+    padding: 1rem;
+    background-color: black;
+}
+
+.footer_links, .footer_social, .footer_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer_logo{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: #fff;
+}
+
+.footer_links, .footer_social, .footer_contact{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+}

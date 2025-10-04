@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #6607EB;
+    z-index: 20;
+    position: fixed;
+    width: 100%;
+}
+
+.Logo{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul, .navLinks{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.navLinks::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fefefe;
+    transition: 500ms ease;
+    transform: translateX(-50%, 50%);
+}
+
+.navLinks:hover::after{
+    width: 100%;
+}
+
+.menu_icon{
+    color: #fff;
+    height: 2rem;
+    width: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 800px){
+    .menu_icon{
+        display: block;
+    }
+    .nav_links{
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: #6607EB;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+        height: 90vh;
+        width: 100%;
+        max-width: 450px;
+        left: -450px;
+        transition: 500ms ease;
+        z-index: 15;
+    }
+    .open{
+        left: 0;
+    }
+    
+}

@@ -1,0 +1,33 @@
+.page_title_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.page_title{
+    font-size: 2rem;
+    position: relative;
+}
+
+.page_link{
+    text-decoration: none;
+    color: black;
+}
+
+.page_title::after{
+    content: "";
+    background-color: black;
+    height: 3px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-radius: 30px;
+    width: 0;
+    transform: translateX(-50%, 50%);
+    transition: 500ms ease;
+}
+
+.page_title:hover::after{
+    width: 140px;
+}
