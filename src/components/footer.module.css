@@ -1,29 +1,106 @@
-.footer_section{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
-    height: auto;
-    width: 100%;
-    place-items: center;
-    padding: 1rem;
-    background-color: black;
+/* Footer wrapper */
+.footer {
+  width: 100%;
+  background: #0b0b0b;
+  color: #eaeaea;
 }
 
-.footer_links, .footer_social, .footer_contact{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+/* Inner grid container */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.footer_logo{
-    font-size: 2rem;
-    text-decoration: none;
-    font-weight: 800;
-    color: #fff;
+/* Brand area */
+
+.brand_name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.footer_links, .footer_social, .footer_contact{
-    font-size: 1rem;
-    text-decoration: none;
-    color: #fff;
+.brand_tagline {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+/* Columns */
+
+.column_title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.link_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  color: #d9d9d9;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #4f9cff;
+}
+
+.link:focus-visible {
+  outline: 2px solid #4f9cff;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+
+  .brand_name {
+    font-size: 1.5rem;
+  }
+
+  .link_list {
+    gap: 0.4rem;
+  }
+}
+
+/* Copyright bar */
+.copyright {
+  width: 100%;
+  background: #0b0b0b;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.copyright p {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 1.5rem;
+  color: #a9a9a9;
+  font-size: 0.85rem;
 }
