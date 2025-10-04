@@ -14,12 +14,12 @@ const Header = () => {
 
       <nav>
         <ul className={`${HeaderStyle.nav_links} ${open ? HeaderStyle.open : HeaderStyle.close}`}>
-          <li><Link to="/" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Home</Link></li>
-          <li><Link to="/about" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>About</Link></li>
-          <li><Link to="/contact" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Contact</Link></li>
-          <li><Link to="/login" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Login</Link></li>
-          <li><Link to="/register" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Sign Up</Link></li>
-          <li><Link to="/dashboard" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Dashboard</Link></li>
+          <button><Link to="/" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Home</Link></button>
+          <button><Link to="/about" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>About</Link></button>
+          <button><Link to="/contact" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Contact</Link></button>
+          <button><Link to="/login" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Login</Link></button>
+          <button><Link to="/register" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Sign Up</Link></button>
+          <button><Link to="/dashboard" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Dashboard</Link></button>
           <li><Link to="/logout" className={HeaderStyle.navLinks} onClick={() => setOpen(false)}>Profile</Link></li>
         </ul>
       </nav>

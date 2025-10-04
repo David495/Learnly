@@ -7,20 +7,20 @@ import Testimonial_two from '../images/testimonial_two.jpeg'
 import Testimonial_three from '../images/testimonial_three.jpeg'
 import { Link } from 'react-router-dom'
 import Page_title from '../components/page_title.jsx'
-import { Mail } from 'lucide-react'
-import { Phone } from 'lucide-react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Footer from '../components/footer.jsx'
+import ContactLay from '../components/contact_layout.jsx'
+
 const Home = () => {
   return (
     <>
     <main className={HomePageStyle.hero_section}>
       <div className="image_section">
-        <img src={Image} alt="Hero Image" className={HomePageStyle.hero_image}/>
+        <img src={Image} alt="Hero Image" className={HomePageStyle.hero_image} loading='lazy'/>
       </div>
 
       <div className={HomePageStyle.text_section}>
@@ -43,34 +43,9 @@ const Home = () => {
         <img src={About_Image} alt="About Image" className={HomePageStyle.about_image_content}/>
       </div>
     </section>
-
-    <section className={HomePageStyle.contact_section}>
-
-
-      <div className={HomePageStyle.inner_contact_content}>
-      <div>
-        <h1 className={HomePageStyle.contact_section_title}>Contact Us</h1>
-        <p>Have questions or need support? Our team is here to help.</p>
-      </div>
-
-      <div className="contact_info_mail">
-       <Mail/> learnly@gmail.com
-      </div>
-      <div className="contact_info_phone">
-       <Phone/> 08034056385
-      </div>
-      </div>
-      <form action="" className={HomePageStyle.contact_form_layout}>
-      <input type="text" placeholder='Name' className={HomePageStyle.input_name} required></input>
-      <input type="text" placeholder='email' className={HomePageStyle.email_input} required/>
-      <input type="text" placeholder='Subject' className={HomePageStyle.subject_input} required/>
-      <textarea placeholder='Message' className={HomePageStyle.message_input} required></textarea>
-      <button className={HomePageStyle.contact_submit_button}>Submit</button>
-      </form>
-    </section>
-
+      <ContactLay/>
     <div style={{ width: "100%", height: "60vh" }}>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8070639.283284887!2d3.3710119065334845!3d8.995886348042319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sNigeria!5e0!3m2!1sen!2sng!4v1759525244499!5m2!1sen!2sng" width="600" height="450" style={{border: 0, width: "100%", height: "100%"}} allowFullScreen="" loading="lazy" reFerrerPolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8070639.283284887!2d3.3710119065334845!3d8.995886348042319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sNigeria!5e0!3m2!1sen!2sng!4v1759525244499!5m2!1sen!2sng" width="600" height="450" style={{border: 0, width: "100%", height: "100%"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <section className={HomePageStyle.testimonial_section}>
