@@ -1,12 +1,14 @@
 .hero_section{
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: #042c90;
     padding: 3rem;
     animation: fade_in 3s ease;
+    margin-top: 4rem;
+    gap: 1rem;
 }
 @keyframes fade_in{
     30%{
@@ -24,8 +26,8 @@
 }
 
 .text_section{
-    max-width: 400px;
-    gap: 1.5rem;
+    max-width: 450px;
+    gap: 2rem;
 }
 
 .about_image_content{
@@ -110,9 +112,12 @@
 
 
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .hero_section, .about_section{
         flex-direction: column;
+    }
+    .hero_image{
+        max-width: 400px;
     }
     .heroButton{
         padding: .5rem 1rem; 
