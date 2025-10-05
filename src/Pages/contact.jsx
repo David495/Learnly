@@ -1,5 +1,4 @@
 import React from 'react'
-import Contact_styLe from '../Pages/contact.module.css'
 import Contact_layout from '../components/contact_layout.jsx'
 import Footer from '../components/footer.jsx'
 const Contact = () => {

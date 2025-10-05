@@ -49,7 +49,7 @@
     animation: grow 3s ease;
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .main_section, .story_section, .mission_section{
         flex-direction: column;
         margin-bottom: 50px;

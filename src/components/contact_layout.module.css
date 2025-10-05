@@ -58,7 +58,7 @@
     gap: 10px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .inner_contact_content{
         display: none;
     }
