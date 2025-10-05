@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { account, ID } from '../appwrite';
 import Signup_Style from './signup.module.css';
 import Google_Logo from '../images/google_logo.png';
-import Apple_Logo from '../images/apple_logo.png';
 
 const Signup = () => {
 
@@ -12,25 +11,24 @@ const Signup = () => {
   const [message, setMessage] = useState('');
 
   const navigate = useNavigate();
-  
+
 
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await account.create(ID.unique(), email, password);
-      setMessage('Account created successfully'); 
+      await account.create('unique()', email, password);
+      setMessage(' Account created successfully');
       navigate('/dashboard');
     } catch (error) {
-      setMessage(error?.message || 'Account creation failed');
+      setMessage(' Account creation failed: ' + error.message);
     }
-  }
+  };
 
   const handleOAuthLogin = (provider) => {
-    const origin = window.location.origin;
     account.createOAuth2Session(
       provider,
-      `${origin}/dashboard`, // success
-      `${origin}/`           // failure
+      "http://localhost:5173/dashboard",
+      "http://localhost:5173/"            
     );
   };
   
@@ -93,15 +91,10 @@ const Signup = () => {
             <span>or</span>
             <hr className={Signup_Style.signup_hr_tag} />
           </div>
-
+          <p>Continue with Google</p>
           <div className={Signup_Style.google_logo_container} onClick={() => handleOAuthLogin("google")}>
             <img src={Google_Logo} alt="Google Logo" className={Signup_Style.google_logo} />
-            <span className={Signup_Style.signup_social_text}>Google</span>
-          </div>
-
-          <div className={Signup_Style.apple_logo_container}>
-            <img src={Apple_Logo} alt="Apple Logo" className={Signup_Style.apple_logo} />
-            <span className={Signup_Style.signup_social_text}>Apple</span>
+            <span className={Signup_Style.signup_social_text}   onClick={() => handleOAuthLogin("google")}>Google</span>
           </div>
         </form>
       </main>

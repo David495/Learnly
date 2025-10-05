@@ -29,7 +29,7 @@ const Home = () => {
       <p className={HomePageStyle.subText}>
       Learnly gives you the tools to study, write, and create with ease—powered by AI, designed for you.
       </p>
-      <button className={HomePageStyle.heroButton}><Link to='/login' className={HomePageStyle.heroButton_text}>Get Started</Link></button>
+      <button className={HomePageStyle.heroButton}><Link to='/register' className={HomePageStyle.heroButton_text}>Get Started</Link></button>
       </div>
     </main>
     <Page_title Title={'About Us'}/>

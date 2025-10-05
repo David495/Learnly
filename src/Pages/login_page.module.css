@@ -55,7 +55,7 @@
     }
 }
 
-.google_logo, .apple_logo{
+.google_logo{
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -66,7 +66,7 @@
 .google_logo{
     filter: invert(0%);
 }
-.google_logo_container, .apple_logo_container{
+.google_logo_container{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -84,7 +84,7 @@
     cursor: pointer;
 }
 
-.apple_logo_container, .google_logo_container{
+.google_logo_container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +107,7 @@
     text-decoration: none;
 }
 
-.login_sub_title_google, .login_sub_title_apple{
+.login_sub_title_google{
     text-decoration: none;
     color: #fff;
 }
