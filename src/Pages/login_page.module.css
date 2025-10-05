@@ -1,0 +1,113 @@
+.main_login_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1506e098;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.login_input_name, .login_input_password{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login_hr_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .4rem;
+}
+
+.login_hr_tag{
+    flex: 1;
+}
+
+.login_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+}
+
+@media (max-width: 800px){
+    .login_form{
+        max-width: 350px;
+    }
+}
+
+.google_logo, .apple_logo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: invert(100%);
+}
+
+.google_logo{
+    filter: invert(0%);
+}
+.google_logo_container, .apple_logo_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login_button{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #433bba;
+    color: #fff;
+    cursor: pointer;
+}
+
+.apple_logo_container, .google_logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #1506e0;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.login_heading{
+    font-size: 1.3rem;
+}
+.login_sub_title{
+    color: #aea7a7;
+    text-decoration: none;
+}
+
+.login_sub_title_google, .login_sub_title_apple{
+    text-decoration: none;
+    color: #fff;
+}

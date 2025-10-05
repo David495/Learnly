@@ -1,0 +1,124 @@
+ .main_signup_section{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-color: #1506e098;
+     width: 100%;
+     margin-top: 4rem;
+ }
+
+ .signup_form{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     max-width: 450px;
+     gap: 1rem;
+     background-color: #fff;
+     padding: 2rem;
+     border-radius: 10px;
+ }
+
+ .signup_heading{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     max-width: 450px;
+ }
+
+ .signup_title{
+     font-size: 1.5rem;
+     font-weight: 700;
+ }
+
+ .signup_sub_title{
+     color: #aea7a7;
+ }
+
+ .signup_sub_title_text{
+     color: #aea7a7;
+     text-align: center;
+ }
+
+ .name_row{
+     width: 100%;
+     display: flex;
+     gap: 1rem;
+ }
+
+ .signup_input{
+     width: 100%;
+     padding: 1rem;
+     border: none;
+     border-radius: 10px;
+     outline: none;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .signup_button{
+     width: 100%;
+     padding: 1rem;
+     border: none;
+     border-radius: 10px;
+     outline: none;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     background-color: #433bba;
+     color: #fff;
+     cursor: pointer;
+ }
+
+ .signup_hr_container{
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     width: 100%;
+ }
+
+ .signup_hr_tag{
+     flex: 1;
+ }
+
+ .google_logo, .apple_logo{
+     width: 50px;
+     height: 50px;
+     object-fit: cover;
+     border-radius: 50%;
+     filter: invert(100%);
+ }
+
+ .google_logo{
+     filter: invert(0%);
+ }
+
+ .google_logo_container, .apple_logo_container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: .5rem;
+     width: 100%;
+     border-radius: 10px;
+     outline: none;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     background-color: #1506e0;
+     color: #fff;
+     cursor: pointer;
+     padding: .5rem 1rem;
+ }
+
+ .signup_social_text{
+     color: #fff;
+     text-decoration: none;
+ }
+
+ @media (max-width: 800px){
+     .signup_form{
+         max-width: 350px;
+     }
+ }
+
+ @media (max-width: 500px){
+     .name_row{
+         flex-direction: column;
+     }
+ }
