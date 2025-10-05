@@ -12,6 +12,7 @@ const Signup = () => {
   const [message, setMessage] = useState('');
 
   const navigate = useNavigate();
+  
 
   const handleSignup = async (e) => {
     e.preventDefault();
