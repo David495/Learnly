@@ -57,7 +57,7 @@ const Login_page = () => {
         <hr className={Login_page_style.login_hr_tag}/>
     </div>
     <p>Continue with Google</p>
-     <div className={Login_page_style.google_logo_container} onClick={() => handleGoogleLogin()}>
+     <div className={Login_page_style.google_logo_container} onClick={handleGoogleLogin}>
           <img src={Google_Logo} alt="Google Logo" className={Login_page_style.google_logo} />
           <span className={Login_page_style.login_sub_title_google}>Google</span>
     </div>
