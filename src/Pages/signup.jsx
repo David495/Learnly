@@ -35,8 +35,8 @@ const Signup = () => {
   const handleOAuthLogin = (provider) => {
     account.createOAuth2Session(
       provider,
-      "http://localhost:5173/dashboard",
-      "http://localhost:5173/"            
+      "https://learnly-one.vercel.app/dashboard",
+      "https://learnly-one.vercel.app/"            
     );
   };
   
