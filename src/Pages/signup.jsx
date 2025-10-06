@@ -9,18 +9,26 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const fullName = `${firstName} ${lastName}`;
 
   const navigate = useNavigate();
 
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
     try {
-      await account.create('unique()', email, password);
+      await account.create(ID.unique(), email, password, fullName);
       setMessage(' Account created successfully');
       navigate('/dashboard');
     } catch (error) {
-      setMessage(' Account creation failed: ' + error.message);
+      setError(' Account creation failed: ' + error.message);
+    }
+    finally{
+      setLoading(false);
     }
   };
 
@@ -79,7 +87,8 @@ const Signup = () => {
             required
           />
 
-          <button type="submit" className={Signup_Style.signup_button}>Sign up</button>
+          <button type="submit" className={Signup_Style.signup_button} disabled={loading}>{loading ? "Signing up..." : "Sign up"}</button>
+          {error && <p>{error}</p>}
 
           {message && <p style={{ color: "red", marginTop: "10px" }}>{message}</p>}
           <p className={Signup_Style.signup_sub_title_text}>
@@ -92,9 +101,10 @@ const Signup = () => {
             <hr className={Signup_Style.signup_hr_tag} />
           </div>
           <p>Continue with Google</p>
-          <div className={Signup_Style.google_logo_container} onClick={() => handleOAuthLogin("google")}>
+          <div className={Signup_Style.google_logo_container} onClick={() => handleOAuthLogin("google")}style={{ cursor: loading ? "not-allowed" : "pointer", opacity: loading ? 0.6 : 1 }}>
             <img src={Google_Logo} alt="Google Logo" className={Signup_Style.google_logo} />
-            <span className={Signup_Style.signup_social_text}   onClick={() => handleOAuthLogin("google")}>Google</span>
+            <span className={Signup_Style.signup_social_text}>Google</span>
+            {loading && <div className={Signup_Style.loader_sign_up}></div>}
           </div>
         </form>
       </main>
